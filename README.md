@@ -64,7 +64,7 @@ nohup java -jar $KVHOME/lib/kvstore.jar start -root $KVROOT >/dev/null 2>&1 </de
 ```
 
 
-In our case, we will use the following scripts [clean.sh](./scripts/clean.sh) and [boot.sh](./scripts/boot.sh) 
+In our case, we will use the following scripts [clean.sh](./script/clean.sh) and [boot.sh](./script/boot.sh) 
 
 **TIP**: run jps to validate that nothing is running from a previous test. if it is the case, just kill the processes. (**NB** If you are not using Oracle JDK, use ps command)
 ````
@@ -114,9 +114,9 @@ We will deploy our cluster in multiple steps in order to illustrate most popular
 
 
 In our case, we will use the following scripts for each scenario
-1) [config1x1.kvs](./scripts/config1x1.kvs)
-2) [config1x3.kvs](./scripts/config1x3.kvs) 
-3) [config3x3.kvs](./scripts/config3x3.kvs) 
+1) [config1x1.kvs](./script/config1x1.kvs)
+2) [config1x3.kvs](./script/config1x3.kvs) 
+3) [config3x3.kvs](./script/config3x3.kvs) 
 
 ```
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -file config1x1.kvs
