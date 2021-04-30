@@ -38,10 +38,10 @@ sudo alternatives --config java
 FYI, In this demo, I will install our cluster using a jdk1.8 version in order to have access jps - Java Virtual Machine Process Status Tool
 
 ## Download and unzip the binary and exemples
-
+```
 unzip kv-ee-21.1.12.zip -d nosql
 unzip kv-examples-21.1.12.zip -d nosql
-
+````
 
 ## Config & start agent 
 
@@ -50,6 +50,9 @@ Each of these parameters are directives to use with the makebootconfig utility
 [https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929]
 
 Start the Oracle NoSQL Database Storage Node Agent (SNA)
+```
+nohup java -jar $KVHOME/lib/kvstore.jar start -root $KVROOT >/dev/null 2>&1 </dev/null &
+```
 
 
 In our case, we will use the following scripts [clean.sh](./scripts/clean.sh) and [boot.sh](./scripts/boot.sh) 
