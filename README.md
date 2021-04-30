@@ -39,6 +39,12 @@ sudo alternatives --config java
 FYI, In this demo, I will install our cluster using a jdk1.8 version in order to have access jps - Java Virtual Machine Process Status Tool
 
 ## Download and unzip the binary and exemples
+)
+Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/technologies/nosql-database-server-downloads.html)
+- Community Edition : Oracle NoSQL Database Community Edition (CE) software is licensed pursuant to the Apache 2.0 License (Apache 2.0). The Apache 2.0 License can be viewed at this location or in the downloaded software.
+- Enterprise Edition
+
+In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition (Release 21.1)[https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html]
 ```
 unzip kv-ee-21.1.12.zip -d nosql
 unzip kv-examples-21.1.12.zip -d nosql
@@ -99,10 +105,10 @@ sudo systemctl stop firewalld
 
 ## Deploy your cluster
 
-We will deploy our cluster in multiple steps in order to illustrate multiple scenarios :
+We will deploy our cluster in multiple steps in order to illustrate possibles scenarios :
 1) Create minimal store (1x1) - 1 server - for test only not for production that requires high availability and business continuity
-2) Increase availability (1x3) - deployed on 3 servers but only 1 shard
-3) Elastic Expansion and Rebalancing (3x3) - 3 disks on 3 servers - increase the capacity and rebalance in 3 shards
+2) Increase availability (1x3) - deployed on 3 servers but only 1 shard - increase the replication factor from 1 to 3 for high availability and business continuity
+3) Elastic Expansion and Rebalancing (3x3) - 3 disks on 3 servers - increase the capacity and rebalance the cluster using the new 3 shards
 
 
 In our case, we will use the following scripts for each scenario
