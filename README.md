@@ -133,7 +133,7 @@ cd $KVHOME
 javac -cp examples:lib/kvclient.jar examples/hadoop/table/LoadVehicleTable.java
 java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -store OUG -host node1-nosql -port 5000 -nops 1000
 
-# Learn more Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
+# Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
 
 The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
 deploying the Oracle NoSQL Database on the OCI platform. Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
