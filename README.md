@@ -62,11 +62,8 @@ unzip kv-examples-21.1.12.zip -d nosql
 Before you configure Oracle NoSQL Database, you should determine the parameters for each Storage Node in the store. 
 Each of these parameters are directives to use with the makebootconfig utility, [see the documentation](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
 
-Start the Oracle NoSQL Database Storage Node Agent (SNA)
-```
-nohup java -jar $KVHOME/lib/kvstore.jar start -root $KVROOT >/dev/null 2>&1 </dev/null &
-```
-
+1) Configue using the makebootconfig utility
+2) Start the Oracle NoSQL Database Storage Node Agent (SNA)
 
 In our case, we will use the following scripts [clean.sh](./script/clean.sh) and [boot.sh](./script/boot.sh) 
 
