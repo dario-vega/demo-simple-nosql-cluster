@@ -24,7 +24,7 @@ sudo yum -y install java-latest-openjdk-devel
 
 The Oracle NoSQL Database server is compatible with Java SE 8 (64-bit), and the client is compatible with Java SE 8. Both the client and the server require at least Java SE 8, and should work with more recent Java SE versions
 
-I've tested with multiple Oracle JDK versions and it is working with all version as documented.
+I've tested with multiple Oracle JDK versions and it is working with all versions as documented.
 
 ```
 sudo yum install java
