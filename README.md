@@ -78,7 +78,7 @@ Run the commands clean.sh and boot.sh
 ### Useful script
 
 Source the following env variables and alias
-
+```
 cat env.sh
 
 export KVROOT=/home/opc/nosql/kvroot
@@ -90,7 +90,7 @@ echo $KVROOT
 echo $KVDATA
 echo $KVHOME
 echo $KVHOST
-
+```
 
 ### Configuring the Firewall
 
