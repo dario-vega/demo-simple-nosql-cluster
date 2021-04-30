@@ -46,7 +46,7 @@ Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/tec
 
 In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition [Release 21.1](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html)
 
-For more information about difference between version and other topics, visit the [FAQ](https://www.oracle.com/database/technologies/nosqldb-learnmore-nosqldb-faq.html)
+For more information about difference between versions and other topics, visit the [FAQ](https://www.oracle.com/database/technologies/nosqldb-learnmore-nosqldb-faq.html)
 
 ```
 unzip kv-ee-21.1.12.zip -d nosql
