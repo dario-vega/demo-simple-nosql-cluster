@@ -46,9 +46,9 @@ unzip kv-examples-21.1.12.zip -d nosql
 
 ## Config & start agent 
 
-Before you configure Oracle NoSQL Database, you should determine the following parameters for each Storage Node in the store. 
-Each of these parameters are directives to use with the makebootconfig utility
-[https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929]
+Before you configure Oracle NoSQL Database, you should determine the parameters for each Storage Node in the store. 
+Each of these parameters are directives to use with the makebootconfig utility, [see the documentation]
+(https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
 
 Start the Oracle NoSQL Database Storage Node Agent (SNA)
 ```
@@ -58,7 +58,7 @@ nohup java -jar $KVHOME/lib/kvstore.jar start -root $KVROOT >/dev/null 2>&1 </de
 
 In our case, we will use the following scripts [clean.sh](./scripts/clean.sh) and [boot.sh](./scripts/boot.sh) 
 
-TIP: run jps to validate that nothing is running from a previous test, if it is the case, just kill the processes. (NB If you are not using Oracle JDK, use ps command)
+**TIP**: run jps to validate that nothing is running from a previous test. if it is the case, just kill the processes. (**NB** If you are not using Oracle JDK, use ps command)
 ````
 [opc@node1-nosql ~]$ jps
 9060 ManagedService
@@ -125,6 +125,18 @@ cd $KVHOME
 javac -cp examples:lib/kvclient.jar examples/hadoop/table/LoadVehicleTable.java
 java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -store OUG -host node1-nosql -port 5000 -nops 1000
 
+# Learn more Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
+
+The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
+deploying the Oracle NoSQL Database on the OCI platform. Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
+
+Scripts on https://www.oracle.com/database/technologies/nosql-database-server-downloads.html
+
+This script lets a user set up a small cluster (1-10 machines) quickly, for use in proof-of-concepts, small on premise installations, and cluster installations 
+in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environment of your choosing.
+
+# Oracle NoSQL Database Cloud Service
+[Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that is designed for database operations that require predictable, single digit millisecond latency responses to simple queries. NoSQL Database Cloud Service allows developers to focus on application development rather than setting up cluster servers, or performing system monitoring, tuning, diagnosing, and scaling. 
 
 
 
