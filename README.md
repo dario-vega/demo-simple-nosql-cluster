@@ -114,9 +114,9 @@ We will deploy our cluster in multiple steps in order to illustrate most popular
 
 
 In our case, we will use the following scripts for each scenario
-[config1x1.kvs](./scripts/config1x1.kvs) 
-[config1x3.kvs](./scripts/config1x3.kvs) 
-[config3x3.kvs](./scripts/config3x3.kvs) 
+1) [config1x1.kvs](./scripts/config1x1.kvs)
+2) [config1x3.kvs](./scripts/config1x3.kvs) 
+3) [config3x3.kvs](./scripts/config3x3.kvs) 
 
 ```
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -file config1x1.kvs
