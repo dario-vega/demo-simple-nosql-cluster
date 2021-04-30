@@ -32,8 +32,9 @@ sudo yum install -y jdk1.8
 # download the rmp 
 sudo yum localinstall jdk-13.0.2_linux-x64_bin.rpm
 ```
+```
 sudo alternatives --config java
-
+```
 
 FYI, In this demo, I will install our cluster using a jdk1.8 version in order to have access jps - Java Virtual Machine Process Status Tool
 
