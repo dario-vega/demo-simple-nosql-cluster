@@ -107,7 +107,7 @@ sudo systemctl stop firewalld
 
 ## Deploy your cluster
 
-We will deploy our cluster in multiple steps in order to illustrate possibles scenarios :
+We will deploy our cluster in multiple steps in order to illustrate most popular scenarios :
 1) Create minimal store (1x1) - 1 server - for test only not for production that requires high availability and business continuity
 2) Increase availability (1x3) - deployed on 3 servers but only 1 shard - increase the replication factor from 1 to 3 for high availability and business continuity
 3) Elastic Expansion and Rebalancing (3x3) - 3 disks on 3 servers - increase the capacity and rebalance the cluster using the new 3 shards
@@ -118,9 +118,18 @@ In our case, we will use the following scripts for each scenario
 [config1x3.kvs](./scripts/config1x3.kvs) 
 [config3x3.kvs](./scripts/config3x3.kvs) 
 
+```
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -file config1x1.kvs
+```
+![Working](1x1.PNG)
+```
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -file config1x3.kvs
+```
+![Working](1x3.PNG)
+```
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -file config3x3.kvs
+```
+![Working](3x3.PNG)
 
 ## Validate your deployment
 
@@ -145,9 +154,4 @@ in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environm
 
 # Oracle NoSQL Database Cloud Service
 [Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that is designed for database operations that require predictable, single digit millisecond latency responses to simple queries. NoSQL Database Cloud Service allows developers to focus on application development rather than setting up cluster servers, or performing system monitoring, tuning, diagnosing, and scaling. 
-
-
-
-
-
 
