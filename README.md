@@ -133,14 +133,16 @@ java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql load -fi
 
 ## Validate your deployment
 
+```
 java -jar $KVHOME/lib/kvstore.jar ping  -port 5000 -host node1-nosql
-
+```
 
 ## Fill the store with different tables
-
+```
 cd $KVHOME
 javac -cp examples:lib/kvclient.jar examples/hadoop/table/LoadVehicleTable.java
 java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -store OUG -host node1-nosql -port 5000 -nops 1000
+```
 
 # Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
 
