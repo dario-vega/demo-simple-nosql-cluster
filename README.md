@@ -11,7 +11,7 @@ Just before start an Oracle NoSQL installation, I recommend to read those links
 The client and server have been tested and certified against OpenJDK 11.0.2 (Oracle NoSQL 21.1 version). We encourage you to upgrade to the latest Java release to take advantage of the latest bug fixes and performance improvements. We expect to certify Oracle NoSQL Database with more recent Java versions in a future release.
 
 
-I've tested with multiple Open JDK versions and it is working but it is currenlty working with all versions as documented.
+I've tested with multiple Open JDK versions and it is working with all versions as documented.
 ```
 sudo yum -y install java-8-openjdk-devel
 sudo yum -y install java-11-openjdk-devel
