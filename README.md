@@ -44,7 +44,10 @@ Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/tec
 - Community Edition : Oracle NoSQL Database Community Edition (CE) software is licensed pursuant to the Apache 2.0 License (Apache 2.0). 
 - Enterprise Edition
 
-In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition (Release 21.1)[https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html]
+In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition [Release 21.1](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html)
+
+For more information about difference between version and other topics, visit the [FAQ](https://www.oracle.com/database/technologies/nosqldb-learnmore-nosqldb-faq.html)
+
 ```
 unzip kv-ee-21.1.12.zip -d nosql
 unzip kv-examples-21.1.12.zip -d nosql
@@ -53,8 +56,7 @@ unzip kv-examples-21.1.12.zip -d nosql
 ## Config & start agent 
 
 Before you configure Oracle NoSQL Database, you should determine the parameters for each Storage Node in the store. 
-Each of these parameters are directives to use with the makebootconfig utility, [see the documentation]
-(https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
+Each of these parameters are directives to use with the makebootconfig utility, [see the documentation](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
 
 Start the Oracle NoSQL Database Storage Node Agent (SNA)
 ```
