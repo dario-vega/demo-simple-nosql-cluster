@@ -154,8 +154,8 @@ java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -stor
 6) Upgrade
 7) Monitoring
 
-https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/index.html
-https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/security/index.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/index.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/security/index.html
 
 
 # Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
