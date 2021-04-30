@@ -144,6 +144,20 @@ javac -cp examples:lib/kvclient.jar examples/hadoop/table/LoadVehicleTable.java
 java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -store OUG -host node1-nosql -port 5000 -nops 1000
 ```
 
+## Other topics to explore - 🚧 🚧 🚧 
+
+1) Secure your cluster
+2) Backup & Recovery
+3) Export Import
+4) HDD Failure simulation
+5) REST API to Administrate Oracle NoSQL Database
+6) Upgrade
+7) Monitoring
+
+https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/index.html
+https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/security/index.html
+
+
 # Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
 
 The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
