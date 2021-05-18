@@ -158,7 +158,7 @@ nohup kv_proxy &
 
 ```
 
-https://github.com/dario-vega/demo-graphql-nosql/blob/main/graphql_nosql/graphql_oracle_nosql.js
+https://github.com/dario-vega/demo-graphql-nosql
 
 
 
