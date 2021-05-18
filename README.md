@@ -150,6 +150,18 @@ javac -cp examples:lib/kvclient.jar examples/hadoop/table/LoadVehicleTable.java
 java -classpath lib/kvclient.jar:examples   hadoop.table.LoadVehicleTable  -store OUG -host node1-nosql -port 5000 -nops 1000
 ```
 
+## Running the http proxy and test using the github project demo graphql
+
+```
+cd $KVHOME
+nohup kv_proxy &
+
+```
+
+https://github.com/dario-vega/demo-graphql-nosql/blob/main/graphql_nosql/graphql_oracle_nosql.js
+
+
+
 ## Other topics to explore - 🚧 🚧 🚧 
 
 1) Secure your cluster
