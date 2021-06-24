@@ -1,5 +1,6 @@
 rm -rf $KVROOT
 rm -rf $KVDATA
+rm -rf $KVXRS
 mkdir -p ${KVROOT}
 mkdir -p ${KVDATA}
 mkdir -p ${KVDATA}/disk1
