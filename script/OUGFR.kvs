@@ -1,0 +1,5 @@
+connect store -name OUGFR -host localhost -port 5000
+execute 'SET LOCAL REGION FR'
+execute 'CREATE REGION CO'
+execute 'show regions'
+show mrtable-agent-statistics -agent 0 -json
