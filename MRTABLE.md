@@ -1,5 +1,7 @@
 # Creating a one-node cluster for tests with multi-region
 
+Before to execute modify the env.sh in order to provide the good storename to your region
+
 ```
 source env.sh
 sh clean.sh
