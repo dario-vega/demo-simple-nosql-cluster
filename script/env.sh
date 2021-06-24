@@ -14,7 +14,7 @@ echo $KVXRS
 echo $KVSTORE
 
 
-alias kv_sql="java -jar $KVHOME/lib/sql.jar -helper-hosts node1-nosql:5000 -store $KVSTORE "
-alias kv_admin="java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host node1-nosql"
-alias kv_ping="java -jar $KVHOME/lib/kvstore.jar ping  -port 5000 -host node1-nosql"
-alias kv_proxy="java -jar $KVHOME/lib/httpproxy.jar -helperHosts node1-nosql:5000 -storeName $KVSTORE -httpPort 80 -verbose true"
+alias kv_sql="java -jar $KVHOME/lib/sql.jar -helper-hosts $KVHOST:5000 -store $KVSTORE "
+alias kv_admin="java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host $KVHOST"
+alias kv_ping="java -jar $KVHOME/lib/kvstore.jar ping  -port 5000 -host $KVHOST"
+alias kv_proxy="java -jar $KVHOME/lib/httpproxy.jar -helperHosts $KVHOST:5000 -storeName $KVSTORE -httpPort 80 -verbose true"
