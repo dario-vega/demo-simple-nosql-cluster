@@ -77,7 +77,7 @@ The instructions below specify a manual procedure for creating a backup of a mul
 
 **NOTE** This exemple is provided for educational purposes only.
 
-The  [migrator-export-users.json](./script/migrator-export-users.json) and [migrator-import-users.json](./script/migrator-import-users.json) show an exemple of scripts used to export/import data in a MR table configuration. In this case, we are exporting in a region, and we decided to do the import in the other region.
+The [migrator-export-users.json](./script/migrator-export-users.json) and [migrator-import-users.json](./script/migrator-import-users.json) show an exemple of scripts used to export/import data in a MR table configuration. In this case, we are exporting in a region, and we decided to do the import in the other region.
 
 ````
 ./runMigrator --config migrator-export-users.json
@@ -85,7 +85,7 @@ The  [migrator-export-users.json](./script/migrator-export-users.json) and [migr
 ````
 Use the multi-region statistics to find the most up to date region for the table that you wish to back up. Use the command `show mrtable-agent-statistics -agent 0 -json` to find the region that shows the smallest laggingMS value for the “max” attribute.  This region will contain the most up-to-date version of your table.
 
-The shell script [mrtable-agent-stat.sh](script/ mrtable-agent-stat.sh) can you help you to compare the smallest laggingMS
+The shell script [mrtable-agent-stat.sh](./script/mrtable-agent-stat.sh) can  help you to compare the smallest laggingMS
 ````
 sh mrtable-agent-stat.sh
 ````
