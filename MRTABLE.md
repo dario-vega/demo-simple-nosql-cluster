@@ -13,7 +13,7 @@ nohup java -Xms256m -Xmx2048m -jar $KVHOME/lib/kvstore.jar xrstart -config $KVXR
 ```
 
 # Backup using import/export
-The import/export utility will be deprecated and replaced by the migrator utility.  Suppose you need to retain your per-record TTL values in your backup. In that case, you must currently use export to store your table in binary  format
+**NOTE** The import/export utility will be deprecated and replaced by the migrator utility.  Suppose you need to retain your per-record TTL values in your backup. In that case, you must currently use export to store your table in binary  format
 
 ````
 java  -jar $KVHOME/lib/kvtool.jar export -table users -store OUGCO -helper-hosts node2-nosql:5000  -config export_config -format BINARY
