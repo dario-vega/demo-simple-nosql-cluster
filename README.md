@@ -52,6 +52,7 @@ FYI, In this demo, I will install our cluster using a jdk1.8 version in order to
 Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/technologies/nosql-database-server-downloads.html)
 - Community Edition : Oracle NoSQL Database Community Edition (CE) software is licensed pursuant to the Apache 2.0 License (Apache 2.0). 
 - Enterprise Edition
+- Oracle NoSQL Database Migrator
 
 In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition [Release 21.1](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html)
 
@@ -60,6 +61,7 @@ For more information about difference between versions and other topics, visit t
 ```
 unzip kv-ee-21.1.12.zip -d nosql
 unzip kv-examples-21.1.12.zip -d nosql
+unzip nosql-migrator-1.0.0.zip
 ````
 
 ## Config & start agent 
