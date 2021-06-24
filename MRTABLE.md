@@ -69,7 +69,7 @@ select * from users;
 
 A Multi-Region table is a global logical table that eliminates the problematic and error-prone work of replicating data between regions, enabling developers to focus on application business logic.
 
-Now it is time to test. Scripts are available [here](https://github.com/dario-vega/crdt-blog-nosql/blob/main/README.md)
+Now it is time to test. Scripts are available [here](https://github.com/dario-vega/crdt-blog-nosql)
 
 
 # Backup using migrator Tool
