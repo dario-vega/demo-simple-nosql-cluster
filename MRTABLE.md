@@ -72,7 +72,7 @@ A Multi-Region table is a global logical table that eliminates the problematic a
 Now it is time to test. Scripts are available [here](https://github.com/dario-vega/crdt-blog-nosql)
 
 
-# Backup using migrator Tool
+# Backup/Restore using migrator Tool
 The instructions below specify a manual procedure for creating a backup of a multi-region table and a procedure for restoring that table in the event of table level data loss or corruption. 
 
 **NOTE** This exemple is provided for educational purposes only.
@@ -96,7 +96,7 @@ To restore a multi-region table from an export, it is recommended that you stop 
 And DO NOT FORGET to backup on remote storage (storage that is not local to a NoSQL storage node in the NoSQL topology).
 
 
-# Backup using import/export
+# Backup/Restore using import/export
 **NOTE** The import/export utility will be deprecated and replaced by the migrator utility.  But if you need retain your per-record TTL values in your backup. In that case, you must currently use export to **store your table in binary format**. migrator does not have this TTL support yet
 
 ````
