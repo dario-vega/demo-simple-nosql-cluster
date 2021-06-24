@@ -10,7 +10,9 @@ cp template_config1x1.kvs ${KVSTORE}_config1x1.kvs
 sed -i "s/<HERE>/$KVSTORE/g" ${KVSTORE}_config1x1.kvs
 sed -i "s/<HERE_HOST>/$KVHOST/g" ${KVSTORE}_config1x1.kvs
 java -jar $KVHOME/lib/kvstore.jar runadmin -port 5000 -host localhost load -file ${KVSTORE}_config1x1.kvs
-
+```
+After building the 2 clusters - Configure XRegion Service
+```
 cp ${KVSTORE}_template.json $KVXRS/json.config
 nohup java -Xms256m -Xmx2048m -jar $KVHOME/lib/kvstore.jar xrstart -config $KVXRS/json.config  > $KVXRS/nohup.out &
 sleep 5
