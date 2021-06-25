@@ -3,7 +3,7 @@
 Please read the following blog if you want to have more detailed information about [Multi-Region Table](https://blogs.oracle.com/nosql/oracle-nosql-database-multi-region-table-part1-v2)
 
 In this workshop, 
-* we will create 2 KV sotres with 2 differents StoreName (OUGFR, OUGCO) 
+* we will create 2 KV stores with 2 differents StoreName (OUGFR, OUGCO) 
 * we will Create 2 minimal store (1x1) - 1 server - for test only not for production that requires high availability and business continuity
 * we will create 2 regions FR and CO. (harcoded values)
 * the templates provided for the section Configure XRegion Service are hardcoded (see hosts)
@@ -16,7 +16,9 @@ Review our first [workshop](./README.md) for detailed information about How to d
 
 In each region in the Multi-Region NoSQL Database setup, you must deploy its own KVStore independently.
 
-Before execute, please modify the env.sh in order to provide the good storename for your region and validate the parameters (eg. export KVSTORE=OUGFR)
+Before to execute, please modify the env.sh in order to provide the good StoreName for your region and validate the parameters 
+1. In the first cluster export KVSTORE=OUGFR
+2. In the second cluster export KVSTORE=OUGCO
 
 ```
 source env.sh
@@ -38,14 +40,14 @@ cp ${KVSTORE}_template.json $KVXRS/json.config
 nohup java -Xms256m -Xmx2048m -jar $KVHOME/lib/kvstore.jar xrstart -config $KVXRS/json.config  > $KVXRS/nohup.out &
 sleep 5
 ```
-2- Set Local Region Name and Create Remote Regions
+2- Set Local Region Name and Create Remote Regions by executing the following command in each cluster
 ```
 kv_admin load -file ${KVSTORE}.kvs
 ```
 
 ## Create Multi-Region Tables - 
 
-You must create an MR Table on each KVStore in the connected graph, and specify the list of regions that the table should span. For the use case under discussion, you must create the users table as an MR Table at both the regions, in any order. 
+You must create an MR Table on each KVStore in the connected graph, and specify the list of regions that the table should span. For this first example, you must create the users table as an **MR Table at both the regions**, in any order. 
 
 ````
 CREATE TABLE Users(uid INTEGER, person JSON,PRIMARY KEY(uid))  IN REGIONS CO , FR;
@@ -81,6 +83,8 @@ The [migrator-export-users.json](./script/migrator-export-users.json) and [migra
 
 ````
 ~/nosql-migrator-1.0.0/runMigrator --config migrator-export-users.json
+````
+````
 ~/nosql-migrator-1.0.0/runMigrator --config migrator-import-users.json
 ````
 Use the multi-region statistics to find the most up to date region for the table that you wish to back up. Use the command `show mrtable-agent-statistics -agent 0 -json` to find the region that shows the smallest laggingMS value for the “max” attribute.  This region will contain the most up-to-date version of your table.
@@ -97,9 +101,11 @@ And DO NOT FORGET to backup on remote storage (storage that is not local to a No
 
 
 # Backup/Restore using import/export
-**NOTE** The import/export utility will be deprecated and replaced by the migrator utility.  But if you need retain your per-record TTL values in your backup. In that case, you must currently use export to **store your table in binary format**. migrator does not have this TTL support yet
+**NOTE** The import/export utility will be deprecated and replaced by the migrator utility.  But if you need retain your per-record TTL values in your backup. In that case, you must currently use export to **store your table in binary format**. Migrator tool does not have this TTL support yet
 
 ````
 java -jar $KVHOME/lib/kvtool.jar export -table users -store OUGCO -helper-hosts node2-nosql:5000  -config export_config -format BINARY
+````
+````
 java -jar $KVHOME/lib/kvtool.jar import -table users -store OUGFR -helper-hosts node1-nosql:5000  -config import_config -status ./checkpoint_dir -format BINARY
 ````
