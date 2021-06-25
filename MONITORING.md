@@ -1,4 +1,4 @@
-## Monitoring
+## Monitoring your Oracle NoSQL Cluster
 
 Being a distributed system, the Oracle NoSQL Database is composed of several software components and each expose unique metrics that can be monitored, interpreted, and
 utilized to understand the general health, performance, and operational capability of the Oracle NoSQL Database cluster
