@@ -47,7 +47,7 @@ sudo alternatives --config java
 
 FYI, In this demo, I will install our cluster using a jdk1.8 version in order to have access jps - Java Virtual Machine Process Status Tool
 
-## Download and unzip the binary and exemples
+## Download and unzip the binaries and exemples
 
 Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/technologies/nosql-database-server-downloads.html)
 - Community Edition : Oracle NoSQL Database Community Edition (CE) software is licensed pursuant to the Apache 2.0 License (Apache 2.0). 
