@@ -46,6 +46,13 @@ rg3-rn1.je.config.csv
 rg3-rn1.je.info.0
 rg3-rn1.je.stat.csv
 sn1_0.log
+
+cat rg*-rn*.je.stat.csv | awk -F',' '{print $168 "," $169 "," $170 "," $171}'  | grep -v " , , ,"
+
+
+cat rg*-rn*.je.stat.csv | awk -F',' '{print $83 "," $169 "," $170 "," $171}'  | grep -v " , , ,"
+
+
 ```
 the defaut directory is  $KVROOT/$KVSTORE/log but look the configuration in case of customization
 ```
