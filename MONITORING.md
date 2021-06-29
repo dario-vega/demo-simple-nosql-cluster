@@ -11,7 +11,8 @@ Good proxy for the “health” of the Oracle NoSQL Database rests with applicat
 Metrics like average and 90th percentile response times, average and 90th percentile throughput, as well average number of timeout exceptions encountered from NoSQL API
 calls are all potential indicators that something may be wrong with a component in the NoSQL cluster. 
 
-1. System Log File Monitoring
+
+1. **System Log File Monitoring**
 
 The Oracle NoSQL Database is composed of the multiples components, and each component produces log files that can be monitored
 
@@ -47,9 +48,14 @@ rg3-rn1.je.info.0
 rg3-rn1.je.stat.csv
 sn1_0.log
 
+```
+Oracle NoSQL Database automatically captures Replication Node performance statistics into a log file 
+that you can into into spreadsheet software for analysis.
+The store tracks, logs, and writes statistics at a user specified interval to a CSVfile. 
+The file is je.stat.csv, located in the Environment directory.
+
+```
 cat rg*-rn*.je.stat.csv | awk -F',' '{print $168 "," $169 "," $170 "," $171}'  | grep -v " , , ,"
-
-
 cat rg*-rn*.je.stat.csv | awk -F',' '{print $83 "," $169 "," $170 "," $171}'  | grep -v " , , ,"
 
 
@@ -65,8 +71,7 @@ RN Log directories:
 Admin directory:
     path=/nosql/oracle/product/admin size=2024-MB 
 ```
-2. System Monitoring Agents
-
+2. **System Monitoring Agents**
 Oracle NoSQL Database is also monitored through JMX based system management tools. For JMX based tools, the Oracle NoSQL MIB is found in lib directory of the installation 
 along with the JAR files for the product. For more information on JMX, see the documentation. 
 
