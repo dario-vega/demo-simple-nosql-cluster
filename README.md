@@ -169,7 +169,7 @@ https://github.com/dario-vega/demo-graphql-nosql
 
 1) [Monitoring](./MONITORING.md)
 2) Secure your cluster
-3) Backup & Recovery
+3) [Backup & Recovery](./BACKUP.md)
 4) Export Import
 5) HDD Failure simulation
 6) REST API to Administrate Oracle NoSQL Database
