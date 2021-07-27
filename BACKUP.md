@@ -79,9 +79,9 @@ kv_admin snapshot create -name BACKUP -json 2>/dev/null
 }
 ````
 You can use the command `show topology` to have the backup path at each Storage Node (sn) :
-{ rootDirPath }/snapshots/
-{storageDirEnvPath[]}/../snapsthots
-{adminDirsPath}/*/snapshots
+* { rootDirPath }/snapshots/
+* {storageDirEnvPath[]}/../snapsthots
+* {adminDirsPath}/*/snapshots
 
 ````
 kv_admin show topology -verbose -json | jq -r '.returnValue.sns[] | select (.resourceId == "sn1")|[{name:.resourceId,host:.hostname,rootDir:.rootDirPath,rns:.rns[]}]'
