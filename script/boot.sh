@@ -11,7 +11,7 @@ java -jar $KVHOME/lib/kvstore.jar makebootconfig \
 -mgmt jmx \
 -capacity 1 \
 -storagedir /home/opc/nosql/data/disk1 \
--storagedirsize 500-MB
+-storagedirsize 5500-MB
 
 nohup java -jar $KVHOME/lib/kvstore.jar start -root $KVROOT >/dev/null 2>&1 </dev/null &
 sleep 5
