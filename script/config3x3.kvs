@@ -1,9 +1,9 @@
-plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 500-MB -add -wait
-plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 500-MB -add -wait
-plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 500-MB -add -wait
-plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 500-MB -add -wait
-plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 500-MB -add -wait
-plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 500-MB -add -wait
+plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
 plan change-parameters -service sn1 -wait -params capacity=3
 plan change-parameters -service sn2 -wait -params capacity=3
 plan change-parameters -service sn3 -wait -params capacity=3
