@@ -174,7 +174,7 @@ https://github.com/dario-vega/demo-graphql-nosql
 3) [Backup & Recovery](./BACKUP.md)
 4) [Export Import](./EXPORT.md)
 5) [HDD Failure simulation](./FailedDisk.md)
-6) REST API to Administrate Oracle NoSQL Database
+6) [REST API to Administrate Oracle NoSQL Database](./APIAdmin.md]
 7) Upgrade
 8) [Multi- Regions](./MRTABLE.md)
 
