@@ -1,4 +1,20 @@
+# Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
+
+The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
+deploying the Oracle NoSQL Database on the OCI platform. Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
+
+Scripts on https://www.oracle.com/database/technologies/nosql-database-server-downloads.html
+
+This script lets a user set up a small cluster (1-10 machines) quickly, for use in proof-of-concepts, small on premise installations, and cluster installations 
+in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environment of your choosing.
+
+# Oracle NoSQL Database Cloud Service
+[Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that is designed for database 
+operations that require predictable, single digit millisecond latency responses to simple queries. NoSQL Database Cloud Service allows developers to focus on 
+application development rather than setting up cluster servers, or performing system monitoring, tuning, diagnosing, and scaling. 
+
 # demo-simple-nosql-cluster
+WIP: this project will move ...
 
 ## Prerequisites 
 
@@ -182,16 +198,4 @@ https://github.com/dario-vega/demo-graphql-nosql
 - https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/security/index.html
 
 
-# Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
-
-The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
-deploying the Oracle NoSQL Database on the OCI platform. Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
-
-Scripts on https://www.oracle.com/database/technologies/nosql-database-server-downloads.html
-
-This script lets a user set up a small cluster (1-10 machines) quickly, for use in proof-of-concepts, small on premise installations, and cluster installations 
-in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environment of your choosing.
-
-# Oracle NoSQL Database Cloud Service
-[Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that is designed for database operations that require predictable, single digit millisecond latency responses to simple queries. NoSQL Database Cloud Service allows developers to focus on application development rather than setting up cluster servers, or performing system monitoring, tuning, diagnosing, and scaling. 
 
