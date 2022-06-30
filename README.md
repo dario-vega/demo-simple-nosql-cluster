@@ -77,8 +77,8 @@ In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition
 For more information about difference between versions and other topics, visit the [FAQ](https://www.oracle.com/database/technologies/nosqldb-learnmore-nosqldb-faq.html)
 
 ```
-unzip kv-ee-21.1.12.zip -d nosql
-unzip kv-examples-21.1.12.zip -d nosql
+unzip kv-ee-22.1.16.zip -d nosql
+unzip kv-examples-22.1.16.zip -d nosql
 unzip nosql-migrator-1.0.0.zip
 ````
 
