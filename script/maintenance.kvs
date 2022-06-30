@@ -1,0 +1,4 @@
+topology clone -current -name switchover
+topology change-zone-type -name switchover -znname "DataCenter2" -type primary
+topology change-zone-type -name switchover -znname "DataCenter1" -type secondary
+plan deploy-topology -name switchover -wait
