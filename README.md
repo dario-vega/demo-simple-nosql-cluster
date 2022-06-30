@@ -19,8 +19,8 @@ WIP: this project will move ...
 ## Prerequisites 
 
 Just before start an Oracle NoSQL installation, I recommend to read those links
-- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/overview.html
-- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-prerequisites.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/release-notes/overview.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/admin/installation-prerequisites.html
 
 ```
 sudo yum install git
@@ -29,7 +29,7 @@ git clone https://github.com/dario-vega/demo-simple-nosql-cluster.git
 
 ### Open JDK
 
-The client and server have been tested and certified against OpenJDK 11.0.2 (Oracle NoSQL 21.1 version). We encourage you to upgrade to the latest Java release to take advantage of the latest bug fixes and performance improvements. We expect to certify Oracle NoSQL Database with more recent Java versions in a future release.
+The client and server have been tested and certified against OpenJDK 11.0.2 (Oracle NoSQL 22.1 version). We encourage you to upgrade to the latest Java release to take advantage of the latest bug fixes and performance improvements. We expect to certify Oracle NoSQL Database with more recent Java versions in a future release.
 
 
 I've tested with multiple Open JDK versions and it is working with all versions as documented.
@@ -72,7 +72,7 @@ Donwload the [Oracle NoSQL Database Servers](https://www.oracle.com/database/tec
 - Enterprise Edition
 - Oracle NoSQL Database Migrator
 
-In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition [Release 21.1](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/release-notes/index.html)
+In this demo, we will use the Oracle NoSQL Database Servers - Enterprise Edition [Release 22.1](https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/release-notes/index.html)
 
 For more information about difference between versions and other topics, visit the [FAQ](https://www.oracle.com/database/technologies/nosqldb-learnmore-nosqldb-faq.html)
 
@@ -85,7 +85,7 @@ unzip nosql-migrator-1.3.0.zip
 ## Config & start agent 
 
 Before you configure Oracle NoSQL Database, you should determine the parameters for each Storage Node in the store. 
-Each of these parameters are directives to use with the makebootconfig utility, [see the documentation](https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
+Each of these parameters are directives to use with the makebootconfig utility, [see the documentation](https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/admin/installation-configuration-parameters.html#GUID-9E2B0453-A0CF-4F34-8A82-A6D801D6C929)
 
 1) Configue using the makebootconfig utility
 2) Start the Oracle NoSQL Database Storage Node Agent (SNA)
@@ -109,7 +109,7 @@ cat env.sh
 
 export KVROOT=/home/opc/nosql/kvroot
 export KVDATA=/home/opc/nosql/data
-export KVHOME=/home/opc/nosql/kv-21.1.12
+export KVHOME=/home/opc/nosql/kv-22.1.12
 export KVHOST=`hostname`
 
 echo $KVROOT
@@ -194,8 +194,8 @@ https://github.com/dario-vega/demo-graphql-nosql
 7) Upgrade
 8) [Multi- Regions](./MRTABLE.md)
 
-- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/admin/index.html
-- https://docs.oracle.com/en/database/other-databases/nosql-database/21.1/security/index.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/admin/index.html
+- https://docs.oracle.com/en/database/other-databases/nosql-database/22.1/security/index.html
 
 
 
