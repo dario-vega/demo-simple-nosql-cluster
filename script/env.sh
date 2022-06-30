@@ -1,6 +1,6 @@
 export KVROOT=/home/opc/nosql/kvroot
 export KVDATA=/home/opc/nosql/data
-export KVHOME=/home/opc/nosql/kv-21.1.12
+export KVHOME=/home/opc/nosql/kv-22.1.16
 export KVHOST=`hostname`
 export KVXRS=/home/opc/nosql/xrshome
 export KVSTORE=OUG
