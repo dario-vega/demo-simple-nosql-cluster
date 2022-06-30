@@ -1,0 +1,35 @@
+configure -name OUG;
+plan deploy-zone -name "DataCenter1" -rf 1 -wait;
+plan deploy-zone -name "DataCenter2" -rf 1 -wait;
+plan deploy-zone -name "DataCenter3" -rf 1 -wait;
+
+
+plan deploy-sn -zn zn1 -host node1-nosql -port 5000 -wait;
+plan deploy-admin -sn sn1 -wait;
+
+
+plan deploy-sn -zn zn2 -host node2-nosql -port 5000 -wait;
+plan deploy-sn -zn zn3 -host node3-nosql -port 5000 -wait;
+plan deploy-admin -sn sn2 -wait;
+plan deploy-admin -sn sn3 -wait;
+
+
+plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn1 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn2 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk2 -storagedirsize 5500-MB -add -wait
+plan change-storagedir -sn sn3 -storagedir /home/opc/nosql/data/disk3 -storagedirsize 5500-MB -add -wait
+plan change-parameters -service sn1 -wait -params capacity=3
+plan change-parameters -service sn2 -wait -params capacity=3
+plan change-parameters -service sn3 -wait -params capacity=3
+
+
+pool create -name CloudPool;
+pool join -name CloudPool -sn sn1;
+pool join -name CloudPool -sn sn2;
+pool join -name CloudPool -sn sn3;
+
+topology create -name MultiZone3x3 -pool CloudPool -partitions 300;
+topology preview -name MultiZone3x3;
+plan deploy-topology -name MultiZone3x3 -wait
