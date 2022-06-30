@@ -79,7 +79,7 @@ For more information about difference between versions and other topics, visit t
 ```
 unzip kv-ee-22.1.16.zip -d nosql
 unzip kv-examples-22.1.16.zip -d nosql
-unzip nosql-migrator-1.0.0.zip
+unzip nosql-migrator-1.3.0.zip
 ````
 
 ## Config & start agent 
