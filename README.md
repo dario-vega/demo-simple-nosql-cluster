@@ -139,6 +139,8 @@ For demo purpose, I will stop the firewall in all my servers.
 ````
 # Use the appropiate command, in my case I am using 5.4.17-2102.200.13.el7uek.x86_64 
 sudo systemctl stop firewalld
+sudo systemctl enable firewalld
+
 ````
 
 ## Deploy your cluster
