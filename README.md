@@ -1,20 +1,27 @@
 # Running Oracle NoSQL Database On Public Cloud (OCI, Azure, AWS)
 
-The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed as a reference guide for
-deploying the Oracle NoSQL Database on the OCI platform. Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
+The following [Quick Start white paper](https://www.oracle.com/a/otn/docs/database/oracle-nosql-cluster-setup-oci.pdf) is designed 
+as a reference guide for deploying the Oracle NoSQL Database on the OCI platform. 
+> Read the APPENDIX A -RUNNING ORACLE NOSQLDATABASE ON OTHER CLOUDS
 
 Scripts on https://www.oracle.com/database/technologies/nosql-database-server-downloads.html
 
-This script lets a user set up a small cluster (1-10 machines) quickly, for use in proof-of-concepts, small on premise installations, and cluster installations 
-in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environment of your choosing.
+This script lets a user set up a small cluster (1-10 machines) quickly, for use in proof-of-concepts, small on premise installations, 
+and cluster installations in cloud environments (OCI, AWS, Azure). It's easy to BYOL to the cloud environment of your choosing.
 
 # Oracle NoSQL Database Cloud Service
-[Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that is designed for database 
-operations that require predictable, single digit millisecond latency responses to simple queries. NoSQL Database Cloud Service allows developers to focus on 
-application development rather than setting up cluster servers, or performing system monitoring, tuning, diagnosing, and scaling. 
+[Oracle NoSQL Database Cloud Service](https://www.oracle.com/database/nosql-cloud.html) is a fully managed database cloud service that 
+is designed for database operations that require predictable, single digit millisecond latency responses to simple queries. 
+NoSQL Database Cloud Service allows developers to focus on application development rather than setting up cluster servers, 
+or performing system monitoring, tuning, diagnosing, and scaling. 
 
-# demo-simple-nosql-cluster
-WIP: this project will move ...
+# The demo-simple-nosql-cluster repository
+If you want to create an Oracle NoSQL Cluster, I recommend to use the official scripts above. 
+
+The scripts in this repository are for educational purpose and are my own.
+
+In the development world, practice makes master. That is why you must find as many ways to practice as possible. 
+Never stop learning.
 
 ## Prerequisites 
 
@@ -29,7 +36,9 @@ git clone https://github.com/dario-vega/demo-simple-nosql-cluster.git
 
 ### Open JDK
 
-The client and server have been tested and certified against OpenJDK 11.0.2 (Oracle NoSQL 22.1 version). We encourage you to upgrade to the latest Java release to take advantage of the latest bug fixes and performance improvements. We expect to certify Oracle NoSQL Database with more recent Java versions in a future release.
+The client and server have been tested and certified against OpenJDK 11.0.2 (Oracle NoSQL 22.1 version). We encourage you to upgrade 
+to the latest Java release to take advantage of the latest bug fixes and performance improvements. We expect to certify 
+Oracle NoSQL Database with more recent Java versions in a future release.
 
 
 I've tested with multiple Open JDK versions and it is working with all versions as documented.
@@ -47,7 +56,8 @@ java -XshowSettings:properties 2>&1 | grep vendor
 
 ### Oracle JDK
 
-The Oracle NoSQL Database server is compatible with Java SE 8 (64-bit), and the client is compatible with Java SE 8. Both the client and the server require at least Java SE 8, and should work with more recent Java SE versions
+The Oracle NoSQL Database server is compatible with Java SE 8 (64-bit), and the client is compatible with Java SE 8. 
+Both the client and the server require at least Java SE 8, and should work with more recent Java SE versions
 
 I've tested with multiple Oracle JDK versions and it is working with all versions as documented.
 
@@ -120,9 +130,9 @@ echo $KVHOST
 
 ### Configuring the Firewall
 
-Do not forget to configure all firewalls. To make sure your firewall works with Oracle NoSQL Database, you should set the ports specified by the servicerange parameter 
-of the makebootconfig command. This parameter is used to constrain a store to a limited set of ports, usually for security or data center policy reasons. 
-By default the services use anonymous ports. 
+Do not forget to configure all firewalls. To make sure your firewall works with Oracle NoSQL Database, you should set the ports 
+specified by the servicerange parameter of the makebootconfig command. This parameter is used to constrain a store to a limited 
+set of ports, usually for security or data center policy reasons. By default the services use anonymous ports. 
 
 For demo purpose, I will stop the firewall in all my servers.
 
