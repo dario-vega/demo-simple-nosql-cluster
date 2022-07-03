@@ -16,7 +16,7 @@ NoSQL Database Cloud Service allows developers to focus on application developme
 or performing system monitoring, tuning, diagnosing, and scaling. 
 
 # The demo-simple-nosql-cluster repository
-If you want to create an Oracle NoSQL Cluster, I recommend to use the official scripts above. 
+**If you want to create an Oracle NoSQL Cluster, I recommend to use the official scripts above.** 
 
 The scripts in this repository are for educational purpose and are my own.
 
